@@ -17,6 +17,7 @@ export class PorCapitalComponent {
   constructor(private paisService: PaisService) {}
 
   buscar(termino: string) {
+    if (termino.trim() === '') return;
     this.hayError = false;
     this.termino = termino;
 
